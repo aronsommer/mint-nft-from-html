@@ -33,7 +33,7 @@
                 document.getElementById('mint').onclick = async () => {
                     var tokenId = Number(document.querySelector("[name=tokenId]").value);
                     var amount = Number(document.querySelector("[name=amount]"));
-                    contract.methods.mint(account, tokenId, amount, []).send({ from: account, value: String(amount)});
+                    contract.methods.mint(account, tokenId, amount, []).send({ from: account });
                 }
             }
         })();
