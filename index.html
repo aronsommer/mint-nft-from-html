@@ -29,7 +29,7 @@
                 contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
                 document.getElementById('mint').onclick = async () => {
                     let tokenId = Number(document.querySelector("[name=tokenId]").value);
-                    let amount = Number(document.querySelector("[name=amount]"));
+                    let amount = Number(document.querySelector("[name=Amount]"));
                     contract.methods.mint(accounts[0], tokenId, amount, []).send({ from: accounts[0], value: 0 })
                         .on('transactionHash', function (hash) {
                             console.log("Transaction hash: " + hash);
